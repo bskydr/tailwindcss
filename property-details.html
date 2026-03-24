@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vacation Rentals</title>
+    <title>Property Details - DreamStay</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gradient-to-br from-blue-100 to-teal-100 min-h-screen">
@@ -14,69 +14,61 @@
         <span class="text-2xl font-bold text-teal-700">DreamStay</span>
       </div>
       <nav class="space-x-6">
-        <a href="#" class="text-gray-700 hover:text-teal-600 font-medium">Home</a>
+        <a href="Vacation-rentals-website.html" class="text-gray-700 hover:text-teal-600 font-medium">Home</a>
         <a href="#" class="text-gray-700 hover:text-teal-600 font-medium">Rentals</a>
         <a href="#" class="text-gray-700 hover:text-teal-600 font-medium">About</a>
         <a href="#" class="text-gray-700 hover:text-teal-600 font-medium">Contact</a>
       </nav>
-      <button class="px-5 py-2 rounded-lg bg-teal-500 text-white font-semibold shadow hover:bg-teal-600 transition">Sign In</button>
+      <a href="sign-in.html" class="px-5 py-2 rounded-lg bg-teal-500 text-white font-semibold shadow hover:bg-teal-600 transition">Sign In</a>
     </header>
 
-    <!-- Hero Section -->
-    <section class="text-center py-16 px-4">
-      <h1 class="text-5xl font-extrabold text-teal-700 mb-4 drop-shadow-lg">Find Your Perfect Getaway</h1>
-      <p class="text-lg text-gray-600 mb-8">Browse handpicked vacation rentals for your next adventure.</p>
-      <form class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
-        <input type="text" placeholder="Where to?" class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-300" />
-        <input type="date" class="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-300" />
-        <button class="px-6 py-3 rounded-lg bg-teal-500 text-white font-bold shadow hover:bg-teal-600 transition">Search</button>
-      </form>
-    </section>
-
-    <!-- Featured Rentals -->
-    <section class="max-w-6xl mx-auto px-4 py-12">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Featured Rentals</h2>
-      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Rental Card 1 -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Beach House" class="w-full h-48 object-cover" />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-teal-700 mb-2">Oceanfront Beach House</h3>
-            <p class="text-gray-600 mb-4">Wake up to the sound of waves in this beautiful beachside retreat.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-lg font-bold text-teal-600">$350/night</span>
-              <button class="px-4 py-2 rounded bg-teal-500 text-white font-semibold hover:bg-teal-600 transition">Book</button>
-            </div>
+    <!-- Property Details -->
+    <main class="max-w-5xl mx-auto px-4 py-12">
+      <div class="flex flex-col lg:flex-row gap-10">
+        <!-- Image Gallery -->
+        <div class="flex-1">
+          <img id="mainImage" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Property" class="rounded-2xl shadow-lg w-full h-80 object-cover mb-4 transition-all duration-300" />
+          <div class="flex gap-2">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" class="w-20 h-16 object-cover rounded-lg shadow cursor-pointer hover:ring-2 hover:ring-teal-400" onclick="changeMainImage(this)" />
+            <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80" class="w-20 h-16 object-cover rounded-lg shadow cursor-pointer hover:ring-2 hover:ring-teal-400" onclick="changeMainImage(this)" />
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" class="w-20 h-16 object-cover rounded-lg shadow cursor-pointer hover:ring-2 hover:ring-teal-400" onclick="changeMainImage(this)" />
           </div>
         </div>
-        <!-- Rental Card 2 -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
-          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Mountain Cabin" class="w-full h-48 object-cover" />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-teal-700 mb-2">Cozy Mountain Cabin</h3>
-            <p class="text-gray-600 mb-4">Escape to the mountains in this rustic and charming cabin hideaway.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-lg font-bold text-teal-600">$220/night</span>
-              <button class="px-4 py-2 rounded bg-teal-500 text-white font-semibold hover:bg-teal-600 transition">Book</button>
+        <!-- Details -->
+        <div class="flex-1 flex flex-col gap-6">
+          <div>
+            <h1 class="text-3xl font-extrabold text-teal-700 mb-2">Oceanfront Beach House</h1>
+            <p class="text-lg text-gray-600 mb-4">Wake up to the sound of waves in this beautiful beachside retreat. Enjoy modern amenities, stunning views, and direct access to the beach.</p>
+            <div class="flex items-center gap-4 mb-2">
+              <span class="inline-block px-3 py-1 rounded-full bg-teal-100 text-teal-700 text-sm font-semibold">4 Guests</span>
+              <span class="inline-block px-3 py-1 rounded-full bg-teal-100 text-teal-700 text-sm font-semibold">2 Bedrooms</span>
+              <span class="inline-block px-3 py-1 rounded-full bg-teal-100 text-teal-700 text-sm font-semibold">2 Baths</span>
             </div>
+            <div class="flex items-center gap-2 text-yellow-400 mb-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.176 0l-3.385 2.46c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.045 9.394c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+              <span class="text-gray-700 font-semibold">4.9 (120 reviews)</span>
+            </div>
+            <div class="text-2xl font-bold text-teal-600 mb-4">$350 <span class="text-base font-medium text-gray-500">/ night</span></div>
+            <button class="w-full py-3 rounded-lg bg-teal-500 text-white font-bold shadow hover:bg-teal-600 transition">Book Now</button>
           </div>
-        </div>
-        <!-- Rental Card 3 -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
-          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=600&q=80" alt="City Apartment" class="w-full h-48 object-cover" />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-teal-700 mb-2">Modern City Apartment</h3>
-            <p class="text-gray-600 mb-4">Stay in the heart of the city with all the comforts of home.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-lg font-bold text-teal-600">$180/night</span>
-              <button class="px-4 py-2 rounded bg-teal-500 text-white font-semibold hover:bg-teal-600 transition">Book</button>
-            </div>
+          <div class="border-t pt-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-2">Amenities</h2>
+            <ul class="grid grid-cols-2 gap-2 text-gray-600 text-sm">
+              <li>Wi-Fi</li>
+              <li>Air Conditioning</li>
+              <li>Kitchen</li>
+              <li>Free Parking</li>
+              <li>Washer & Dryer</li>
+              <li>TV</li>
+              <li>Beach Access</li>
+              <li>Pet Friendly</li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
+    <!-- Footer (reuse improved footer) -->
     <footer class="bg-white/90 py-10 mt-16 shadow-inner border-t border-teal-100">
       <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8 text-gray-600">
         <div class="flex items-center gap-3 mb-4 md:mb-0">
@@ -98,5 +90,17 @@
       </div>
       <div class="mt-6 text-center text-gray-400 text-sm">&copy; 2026 DreamStay. All rights reserved.</div>
     </footer>
+    <script>
+      function changeMainImage(thumb) {
+        const mainImage = document.getElementById('mainImage');
+        mainImage.src = thumb.src;
+        // Optional: Add a fade effect
+        mainImage.classList.remove('opacity-0');
+        mainImage.classList.add('opacity-0');
+        setTimeout(() => {
+          mainImage.classList.remove('opacity-0');
+        }, 100);
+      }
+    </script>
   </body>
 </html>
