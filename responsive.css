@@ -1,0 +1,55 @@
+
+/*
+  Example: Responsive utility classes for different display sizes
+  Use these classes in your HTML to apply different styles at each breakpoint.
+
+  xs: 400px
+  sm: 640px
+  md: 768px
+  lg: 1024px
+  xl: 1280px
+  2xl: 1536px
+  3xl: 1920px
+*/
+
+/* Example custom classes for demonstration */
+@layer components {
+  .responsive-demo {
+    @apply bg-blue-200 text-xs p-2;
+  }
+  @screen xs {
+    .responsive-demo {
+      @apply bg-green-200 text-sm;
+    }
+  }
+  @screen sm {
+    .responsive-demo {
+      @apply bg-yellow-200 text-base;
+    }
+  }
+  @screen md {
+    .responsive-demo {
+      @apply bg-pink-200 text-lg;
+    }
+  }
+  @screen lg {
+    .responsive-demo {
+      @apply bg-purple-200 text-xl;
+    }
+  }
+  @screen xl {
+    .responsive-demo {
+      @apply bg-red-200 text-2xl;
+    }
+  }
+  @screen 2xl {
+    .responsive-demo {
+      @apply bg-orange-200 text-3xl;
+    }
+  }
+  @screen 3xl {
+    .responsive-demo {
+      @apply bg-cyan-200 text-4xl;
+    }
+  }
+}
